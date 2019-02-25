@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns=http://www.w3.org/1999/xhtml
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!--<p th:text="'Hello, ' + ${name} + '!'" />-->
+    <table style="width:100%">
+        <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Email</th>
+            <th>Date de naissance</th>
+        </tr>
+        <tr>
+            <!--/*@thymesVar id="nom" type="String"*/-->
+            <td th:text="${nom}"></td>
+            <!--/*@thymesVar id="prenom" type="String"*/-->
+            <td th:text="${prenom}"></td>
+            <!--/*@thymesVar id="email" type="String"*/-->
+            <td th:text="${email}"></td>
+            <!--/*@thymesVar id="datenaiss" type="String"*/-->
+            <td th:text="${datenaiss}"></td>
+        </tr>
+    </table>
+
+</body>
+</html>
