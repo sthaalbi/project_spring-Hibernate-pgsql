@@ -24,8 +24,8 @@ public class Evenement {
     private String type_event;
 //    @OneToMany(mappedBy = "evenement")
 //    private List<Participant> participant;
-    @OneToMany(mappedBy = "evenement", cascade = CascadeType.ALL)
-    private Set<Participant> participant;
+    @OneToMany(mappedBy = "event", cascade = CascadeType.ALL)
+    private List<Participant> participant;
     public Evenement(){}
 
     public Evenement(String intitule, String theme, String date_debut, String duree,
@@ -100,4 +100,10 @@ public class Evenement {
 
     public void setType_event() {
     }
+
+    public void addP(Participant parti) {
+        participant.add(parti);
+    }
+
+
 }

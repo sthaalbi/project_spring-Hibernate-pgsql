@@ -11,6 +11,8 @@ import org.hibernate.annotations.GenericGenerator;
 
 import com.ensg.spring.hello.Evenement;
 
+import java.util.List;
+
 /**
  *
  * @author postgres
@@ -41,8 +43,8 @@ public class Participant {
 //        @ManyToOne
 //        @JoinColumn(name="num_event", nullable=false)
         @ManyToOne
-        @JoinColumn
-        private Evenement evenement;
+        @JoinColumn(name = "num_event")
+        private Evenement event;
 
         public Participant(String nom, String prenom, String email, String datenaiss) {
 
@@ -96,5 +98,7 @@ public class Participant {
         }
 
 
-
+    public void addE(Evenement ev1) {
+        event = ev1;
+    }
 }
