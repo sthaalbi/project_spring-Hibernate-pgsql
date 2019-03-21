@@ -40,6 +40,33 @@ public class Evenement {
             this.type_event = type_event;
 
     }
+    public void setIntitule() {
+    }
+
+    public void setTheme() {
+    }
+
+    public void setDate_debut() {
+    }
+
+    public void setDuree() {
+    }
+
+    public void setNb_part_max() {
+    }
+
+    public void setDescription() {
+    }
+
+    public void setOrganisateur() {
+    }
+
+    public void setType_event() {
+    }
+
+    public void addP(Participant parti) {
+        participant.add(parti);
+    }
 
     public int getNum_event() {
         return num_event;
@@ -77,33 +104,7 @@ public class Evenement {
         return description;
     }
 
-    public void setIntitule() {
-    }
 
-    public void setTheme() {
-    }
-
-    public void setDate_debut() {
-    }
-
-    public void setDuree() {
-    }
-
-    public void setNb_part_max() {
-    }
-
-    public void setDescription() {
-    }
-
-    public void setOrganisateur() {
-    }
-
-    public void setType_event() {
-    }
-
-    public void addP(Participant parti) {
-        participant.add(parti);
-    }
 
 
 }

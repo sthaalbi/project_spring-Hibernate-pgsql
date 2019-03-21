@@ -40,8 +40,6 @@ public class Participant {
         @Column(name = "datenaiss", nullable = false)
         private String datenaiss;
 
-//        @ManyToOne
-//        @JoinColumn(name="num_event", nullable=false)
         @ManyToOne
         @JoinColumn(name = "num_event")
         private Evenement event;
@@ -57,7 +55,7 @@ public class Participant {
     public Participant() {
     }
 
-    public int getNumpers() {
+        public int getNumpers() {
             return numpers;
         }
 

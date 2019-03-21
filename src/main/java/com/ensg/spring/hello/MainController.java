@@ -38,17 +38,6 @@ public class MainController {
         return "Saved";
 
 
-//        Evenement ev1  = new Evenement("ab", "ac","ad","ae", "af", "ag", "ah", "ai");
-//        ev1.setParticipant(parti);
-//        Evenement ev2  = new Evenement("xab", "xac","xad","xae", "xaf", "ag", "ah", "ai");
-//        ev2.setParticipant(parti2);
-//        parti.addE(ev1);
-//        parti2.addE(ev2);
-//        evenementRepository.save(ev1);
-//        evenementRepository.save(ev2);
-//
-//        participantRepository.save(parti);
-//        participantRepository.save(parti2);
     }
 
     @GetMapping(path="/all")
