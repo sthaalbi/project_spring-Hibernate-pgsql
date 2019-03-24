@@ -1,35 +1,43 @@
 <!DOCTYPE HTML>
 <html xmlns=http://www.w3.org/1999/xhtml
       xmlns:th="http://www.thymeleaf.org">
-<head>
-    <title>Getting Started: Serving Web Content</title>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-    <style>
-        table, th, td {
-            border: 1px solid black;
-        }
-    </style>
-</head>
-<body>
-    <!--<p th:text="'Hello, ' + ${name} + '!'" />-->
-    <table style="width:100%">
-        <tr>
-            <th>Nom</th>
-            <th>Prénom</th>
-            <th>Email</th>
-            <th>Date de naissance</th>
-        </tr>
-        <tr>
-            <!--/*@thymesVar id="nom" type="String"*/-->
-            <td th:text="${nom}"></td>
-            <!--/*@thymesVar id="prenom" type="String"*/-->
-            <td th:text="${prenom}"></td>
-            <!--/*@thymesVar id="email" type="String"*/-->
-            <td th:text="${email}"></td>
-            <!--/*@thymesVar id="datenaiss" type="String"*/-->
-            <td th:text="${datenaiss}"></td>
-        </tr>
-    </table>
+    <head>
+        <title>Add Participant</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+        <style>
+            table, th, td {
+                border: 1px solid black;
+            }
+        </style>
+    </head>
 
-</body>
+    <body>
+        <h1>Ajouter un nouveau Participant</h1>
+        <form action="#" th:action="@{/addParticipant}" th:object="${participant}" method="post">
+            <label for="nom"> Nom </label>
+            <input type="text" th:field="*{nom}" id="nom" placeholder="nom">
+
+            <label for="prenom"> Prénom </label>
+            <input type="text" th:field="*{prenom}" id="prenom" placeholder="prenom">
+
+            <label for="email"> Email </label>
+            <input type="email" th:field="*{email}" id="email" placeholder="Email">
+
+            <label for="datenaiss"> Date de naissance </label>
+            <input type="date" th:field="*{datenaiss}" id="datenaiss">
+
+            <label for="event" > Event </label>
+            <select th:field="*{event}" id="event">
+                <option value="">select event</option>
+                <option th:each="event : ${events}" th:value="${event.num_event}" th:text="${event.name}"></option>
+            </select>
+
+
+            <button type="submit"> ENREGISTRER </button>
+
+        </form>
+
+    </body>
+
+
 </html>
