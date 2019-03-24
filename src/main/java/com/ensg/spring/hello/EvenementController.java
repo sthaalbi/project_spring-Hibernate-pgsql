@@ -67,5 +67,10 @@ public class EvenementController {
 
         return "Saved";
     }
+    
+     public void delete(Evenement event) {
+    	eventRepository.delete(event);
+    }
+    
 
 }
