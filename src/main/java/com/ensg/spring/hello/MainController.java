@@ -16,7 +16,7 @@ public class MainController {
     @Autowired
     private EvenementRepository evenementRepository;
 
-    @GetMapping(path="/add") // Map ONLY GET Requests
+    @GetMapping(path="/addParticipant") // Map ONLY GET Requests
     public @ResponseBody String addNewUser (@RequestParam String nom
             , @RequestParam String prenom
             , @RequestParam String email
@@ -30,7 +30,7 @@ public class MainController {
         n.setEmail(email);
         n.setDatenaiss(datenaiss);
         userRepository.save(n);
-        Evenement event1 = new Evenement( "ab", "ac","ad","ae", "af", "ag", "ah", "ai");
+        Evenement event1 = new Evenement( );
         //event1.setParticipant(n);
         n.addE(event1);
         evenementRepository.save(event1);
