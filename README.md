@@ -4,7 +4,7 @@ Ce projet est une application Spring Boot JavaEE qui implémente la persistance 
 
 ## Pour Faire tourner ce projet:
 
-Vous devez disposer d'une base de données postgresql ***hibertable*** accessible par l'utilisateur par défault:  `postgres` .  
+Vous devez disposer d'une base de données postgresql ***hibertable*** accessible par l'utilisateur par défaut:  `postgres` .  
 
 ## Installation
  1. Cloner le dépôt  
