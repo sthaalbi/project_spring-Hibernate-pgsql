@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html xmlns=http://www.w3.org/1999/xhtml xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Participants</title>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+        <style>
+            table, th, td {
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Email</th>
+                <th>Date de naissance</th>
+                <th>Event</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="participant : ${participant}">
+                <td th:text="${participant.nom}">Nom</td>
+                <td th:text="${participant.prenom}">Prénom</td>
+                <td th:text="${participant.email}">Email</td>
+                <td th:text="${participant.datenaiss}">Date de naissance</td>
+                <td th:text="${participant.event.intitule}">Event</td>
+            </tr>
+            </tbody>
+        </table>
+
+    </body>
+
+</html>
