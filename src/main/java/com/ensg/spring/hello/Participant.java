@@ -44,6 +44,10 @@ public class Participant {
         @JoinColumn(name = "num_event")
         private Evenement event;
 
+    //////////////////////////// Constructeurs ////////////////////////////
+        public Participant() {
+        }
+
         public Participant(String nom, String prenom, String email, String datenaiss) {
 
             this.nom = nom;
@@ -51,9 +55,7 @@ public class Participant {
             this.email = email;
             this.datenaiss = datenaiss;
         }
-
-    public Participant() {
-    }
+    /////////////////////////// Getter et Setter //////////////////////////
 
         public int getNumpers() {
             return numpers;
@@ -95,8 +97,9 @@ public class Participant {
             this.datenaiss = datenaiss;
         }
 
-
-    public void addE(Evenement ev1) {
+        /////////////////////////////// Ajouter un événement ////////////////
+        public void addE(Evenement ev1) {
         event = ev1;
     }
+        public  Evenement getEvent(){ return event;}
 }
