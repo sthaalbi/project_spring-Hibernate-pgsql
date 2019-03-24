@@ -4,6 +4,7 @@ package com.ensg.spring.hello;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 import java.util.List;
 import java.util.Set;
 
@@ -13,19 +14,38 @@ public class Evenement {
     @Id
     @GeneratedValue(generator = "increment")
     @GenericGenerator(name = "increment", strategy = "increment")
+    @Column(name = "num_event", nullable = false)
     private int num_event;
+
+    @Column(name = "intitule", nullable = false)
+    @NotEmpty(message = "Required")
     private String intitule;
+
+    @Column(name = "theme")
     private String theme;
+
+    @Column(name = "date_debut")
     private String date_debut;
+
+    @Column(name = "duree")
     private String duree;
+
+    @Column(name = "nb_part_max")
     private String nb_part_max;
+
+    @Column(name = "description")
     private String description;
+
+    @Column(name = "organisateur")
     private String organisateur;
+
+    @Column(name = "type_event")
     private String type_event;
-//    @OneToMany(mappedBy = "evenement")
-//    private List<Participant> participant;
+
     @OneToMany(mappedBy = "event", cascade = CascadeType.ALL)
     private List<Participant> participant;
+
+    ////////////////////////////Constructeurs Evénement///////////////////
     public Evenement(){}
 
     public Evenement(String intitule, String theme, String date_debut, String duree,
@@ -40,6 +60,8 @@ public class Evenement {
             this.type_event = type_event;
 
     }
+
+    ////////////////////////////SETTERS////////////////////////////
     public void setIntitule() {
     }
 
@@ -64,10 +86,12 @@ public class Evenement {
     public void setType_event() {
     }
 
+    /////////////////////// Ajouter un participant ////////////////
     public void addP(Participant parti) {
         participant.add(parti);
     }
 
+    ////////////////////////////GETTERS////////////////////////////
     public int getNum_event() {
         return num_event;
     }
@@ -103,8 +127,6 @@ public class Evenement {
     public String getDescription() {
         return description;
     }
-
-
 
 
 }
