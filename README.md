@@ -11,5 +11,5 @@ Vous devez disposer d'une base de données postgresql ***hibertable*** accessibl
  ``git clone https://github.com/sthaalbi/project_spring-Hibernate-pgsql/ ``  
  ``cd project_spring-Hibernate-pgsql-master``
  2. Vous pouvez accéder à l'application avec l'adresse
- ``http://localhost:8080/demo``
+ ``http://localhost:8080/``
 
